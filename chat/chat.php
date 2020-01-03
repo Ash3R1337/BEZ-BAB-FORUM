@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords"/>
+<meta name="description"/>
+<title>BEZ BAB CHAT</title>
+<link href="css-chat/bootstrap.min.css" rel="stylesheet">
+<link rel="stylesheet" href="css-chat/media-chat.css">
+<link rel="stylesheet" href="css-chat/style-chat-1.css?1.0.1">
+<script src="js/jquery-3.1.0.min.js" type="text/javascript"></script>	
+<script type="text/javascript" src="chat-script.js"></script>	
+<script type="text/javascript"></script>
+</head>
+<body>
+  <?php 
+  require 'db.php';
+  ?>
+  <header>
+      <div class="header-inner">
+          <div class="logo float-left img-fluid">
+          <a href="http://localhost/bez-bab-forum/" title="ГЛАВНАЯ"><img src="img/logo.png"></a>
+        </div>
+        <div class="main-title"><h1>BEZ-BAB THE FORUM</h1></div>
+        <?php if (isset ($_SESSION['logged_user']) ) : ?>
+                  <div class ="logged float-right" title="ТЫ" style="color: #65D9FF; margin: 20px 40px;"> <?php echo $_SESSION['logged_user']->login; ?> 
+                    <div class="exit"><a href="logout.php">Выйти</a></div>
+                    <a href="profile.php"><img class="rounded-circle float-left" style="width: 50px; height: 50px; z-index: 10; display: inline-block; position: relative; right: 60px; top: -47px;" src="img/test.jpg" alt="user"></a>
+                    </div>
+                    <?php else : ?>    
+          <div class="navigation float-right">
+            <ul class="nav">
+                <li class="nav-item">                 
+                  <a class="nav-link" href="login.php">Войти</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="signup.php">Зарегистрироваться</a>                  
+                </li>
+              </ul>
+            </div>
+            <?php endif; ?>
+          </div>
+          </div>
+        </header>        
+<div class="wraper container">
+<div class="row">
+<div id="chat"></div>
+<form class="form-horizontal" role="form">
+   <div class="form-group">
+     <label for="name" class="col-sm-3 col-sm-offset-1 control-label"></label>
+     <div class="col-sm-4 ">
+       <input type="text" class="form-control" style="visibility: hidden;"  id="name" value="<?php echo $_SESSION['logged_user']->login; ?>" placeholder="Введите ваше имя" disabled name="name"/>
+     </div>
+  </div>
+</form>
+<form class="form-horizontal" role="form">
+  <div class="form-group">
+     <label for="text" class="col-sm-3 col-sm-offset-1 control-label">Cообщение</label>
+     <div class="col-sm-7 ">
+         <textarea class="form-control" rows="3" id="text" placeholder="Ввести сообщение" name="text"></textarea>
+     </div>
+  </div>
+</form>
+<div <?php if (!isset($_SESSION['logged_user']) ){ echo 'style="display:none;"'; } ?> class="col-sm-offset-4 col-sm-4 col-xs-offset-2  col-xs-7"> 
+<button  id="btnSend" class="submit btn btn-primary col-sm-12 col-xs-12 btn-lg">Отправить сообщение</button>
+</div>
+</div>
+</div>
+  
+</div>
+<script src="js/bootstrap.min.js"></script>
+</body>
+

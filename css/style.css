@@ -1,0 +1,357 @@
+a {
+	text-decoration: none;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	font-family: font-family: 'Noto Serif', serif;
+	cursor: default;
+	height: 2000px;
+}
+
+li {
+	list-style: none;
+	display: flex;
+}
+
+#gena {
+	margin-right: 20px;
+	position: fixed;
+	z-index: 1000000;
+	bottom: 0;
+	border-radius: 20px;
+	display: none;
+}
+
+
+#gena img {
+	border-radius: 20px;
+}
+
+
+#toTop {
+width: 100px;
+background: #f7f7f7;
+text-align: center;
+padding: 5px;
+position: fixed;
+bottom: 10px;
+right: 10px;
+cursor: pointer;
+display: none;
+color: #333;
+font-family: verdana;
+font-size: 11px;
+border-radius: 80px;
+background-color: #FF1B1B;
+color: #FFFFFF;
+font-weight: 900;
+box-shadow: 0 0 20px 20px #FF1B1B;
+}
+
+.header-inner {
+	background-color: #5518E0;
+	min-width: 100%;
+	height: 100px;
+	left: 0;
+	position: fixed;
+	z-index: 10000030340;
+	border-bottom: 10px solid #5400B3;
+}
+
+.logo img {
+	height: 150px;
+	margin-top: -24px;
+	display: flex;
+}
+
+
+.logo {
+	position: relative;
+	top: 0px;
+	z-index: 100000;
+}
+
+.navigation {
+	position: relative;
+	display: inline-block;
+	margin-right: 100px;
+	margin-top: 30px;
+}
+
+.navigation a {
+	color: #65D9FF;
+}
+
+.navigation a:hover {
+	color: #4283A5;
+}
+
+
+.btn {
+	display: none;
+}
+
+.main-title {
+	position: absolute;
+	z-index: 10;
+	margin-top: 30px;
+	margin-left: 35%;
+	font-size: 20px;
+}
+
+.main-title h1 {
+	transition: background-color 2s ease, box-shadow 2s ease;
+	
+}
+
+.main-title h1:hover {
+	box-shadow: 0 0 30px 30px #FF000C;
+	background-color: #FF000C;
+}
+
+.content-header {
+	min-width: 100%;
+	background-color: #5518E0;
+	margin-top: 100px;
+	height: 600px;
+	position: relative;
+	opacity: 0.9;
+}
+
+.content-header-image {
+	text-align: center;
+}
+
+.content-header-image img {
+	margin: 50px;
+	border-radius: 30px;
+	opacity: 0.4;
+}
+
+#gena-h img {
+	position: absolute;
+	top: 0;
+	margin: 75px 120px;
+	border-radius: 20%;
+	border: 2px solid #65D9FF;
+	transition: border 0.5s ease;
+}
+
+#gena-h img:hover {
+	border: 20px solid #65D9FF;
+}
+
+.head-rules {
+	text-align: center;
+	top: 0;
+	right: 0;
+	position: absolute;
+	margin: 75px 120px;
+	color: #0BF1FF;
+	line-height: 55px;
+	font-weight: 600;
+}
+
+.head-rules li {
+	transition: border-bottom 0.2s ease; 
+}
+
+.head-rules li:hover {
+	border-bottom: 2px solid #0BF1FF;
+}
+
+.content-body {
+	margin-top: 10px;
+	background-color: #5518E0;
+	max-width: 100%;
+	height: 800px;
+}
+
+.sections {
+	padding: 60px 20px;
+}
+
+
+.on-chat a{
+	cursor: pointer;
+	color: #65D9FF;
+	display: inline-block;
+	margin: 0px 40px;
+	text-decoration: none;
+	transition: border-bottom 0.2s ease;
+}
+
+.on-chat a:hover {
+	border-bottom: 3px solid #65D9FF;
+}
+
+.on-chat img{
+	border: 2px solid #65D9FF;
+	transition: border 0.5s ease;
+
+}
+
+.on-chat img:hover {
+	border: 20px solid #65D9FF;
+}
+
+.on-chat h3:after {
+	content: "| Общий чат для всех Без баб";
+	color: #736565;
+	margin-left: 10px;
+	cursor: default;
+}
+
+.on-forums a{
+	cursor: pointer;
+	color: #65D9FF;
+	display: inline-block;
+	margin: 0px 40px;
+	text-decoration: none;
+	transition: border-bottom 0.2s ease;
+}
+
+.on-forums a:hover {
+	border-bottom: 3px solid #65D9FF;
+}
+
+.on-forums img{
+	border: 2px solid #65D9FF;
+	transition: border 0.5s ease;
+
+}
+
+.on-forums img:hover {
+	border: 20px solid #65D9FF;
+}
+
+.on-forums h3:after {
+	content: "| Создай свой тематичный форум или найди другой";
+	color: #736565;
+	margin-left: 10px;
+	cursor: default;
+}
+
+.on-rating a{
+	cursor: pointer;
+	color: #65D9FF;
+	display: inline-block;
+	margin: 0px 40px;
+	text-decoration: none;
+	transition: border-bottom 0.2s ease;
+}
+
+.on-rating a:hover {
+	border-bottom: 3px solid #65D9FF;
+}
+
+.on-rating img{
+	border: 2px solid #65D9FF;
+	transition: border 0.5s ease;
+
+}
+
+.on-rating img:hover {
+	border: 20px solid #65D9FF;
+}
+
+.on-rating h3:after {
+	content: "| Все лучшие Без баб этого форума";
+	color: #736565;
+	margin-left: 10px;
+	cursor: default;
+}
+
+.sections i {
+	margin-left: 10px;
+}
+
+.section-rules{
+	margin-top: 10px;
+	background-color: #5518E0;
+	max-width: 100%;
+	height: 1000px;
+}
+
+.img-rules {
+	text-align: center;
+	z-index: 1000;
+}
+
+.img-rules img {
+	margin-top: -120px;
+}
+
+.rules {
+	text-align: center;
+	margin-top: -140px;
+}
+
+.rules span {
+	color: #65D9FF;
+	font-weight: 600;
+	font-size: 40px;
+}
+
+.rules ul {
+	color: #AD0909;
+	font-weight: 1000;
+	font-size: 30px;
+	margin: 0 auto;
+	line-height: 70px;
+	transition: box-shadow 0.8s ease;
+}
+
+.rules .fas {
+	color: #65D9FF;
+}
+
+.rules ul:hover {
+	box-shadow: 20px 10px 20px 40px #65D9FF;
+}
+
+.the-best {
+	margin-top: 10px;
+	background-color: #5518E0;
+	max-width: 100%;
+	height: 500px;
+	text-align: center;
+	padding-top: 20px; 
+}
+
+.the-best p {
+	color: #65D9FF;
+	font-weight: 900;
+	font-size: 30px;
+	transition: box-shadow 0.8s ease, background-color 0.8s ease;
+}
+
+.the-best p:hover {
+	box-shadow: 0 0 30px 30px #FFF600;
+	background-color: #FFF600;
+}
+
+#demo {
+	margin-top: 90px;
+}
+
+.foot {
+	margin-top: 10px;
+	background-color: black;
+	max-width: 100%;
+	height: 100px;
+	text-align: center;
+	padding-top: 30px;
+}
+
+.footer-inner span {
+	font-size: 40px;
+	font-weight: 700;
+	font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
