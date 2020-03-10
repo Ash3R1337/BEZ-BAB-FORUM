@@ -15,21 +15,14 @@
 <script type="text/javascript"></script>
 </head>
 <body>
-  <?php 
-  require 'db.php';
-  ?>
+  
   <header>
       <div class="header-inner">
           <div class="logo float-left img-fluid">
           <a href="http://localhost/bez-bab-forum/" title="ГЛАВНАЯ"><img src="img/logo.png"></a>
         </div>
         <div class="main-title"><h1>BEZ-BAB THE FORUM</h1></div>
-        <?php if (isset ($_SESSION['logged_user']) ) : ?>
-                  <div class ="logged float-right" title="ТЫ" style="color: #65D9FF; margin: 20px 40px;"> <?php echo $_SESSION['logged_user']->login; ?> 
-                    <div class="exit"><a href="logout.php">Выйти</a></div>
-                    <a href="profile.php"><img class="rounded-circle float-left" style="width: 50px; height: 50px; z-index: 10; display: inline-block; position: relative; right: 60px; top: -47px;" src="img/test.jpg" alt="user"></a>
-                    </div>
-                    <?php else : ?>    
+       
           <div class="navigation float-right">
             <ul class="nav">
                 <li class="nav-item">                 
